@@ -1,0 +1,108 @@
+.living-room-section {
+    /* padding: 10px 20px; */
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+  
+  .living-room-content {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .living-room-content:hover {
+    transform: scale(1.02);
+  }
+  
+  .living-room-content h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 800;
+  }
+  
+  .living-room-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.7;
+  }
+  
+  .living-room-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .living-room-stats div {
+    flex: 1;
+    min-width: 150px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .living-room-stats div:hover {
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .living-room-stats h3 {
+    font-size: 2.8rem;
+    color: #e67e22;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+  
+  .living-room-stats p {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .contact-btn {
+    padding: 14px 36px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .living-room-stats {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .living-room-content h2 {
+      font-size: 2.2rem;
+    }
+  
+    .living-room-content p {
+      font-size: 1rem;
+    }
+  }
+  

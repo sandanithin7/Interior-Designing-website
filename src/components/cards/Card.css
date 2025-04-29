@@ -1,0 +1,132 @@
+/* Card Section Styling */
+.card-section {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .card-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Card Container */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Individual Card Styling */
+  .card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    max-width: 300px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  }
+  
+  /* Icon Styling */
+  .card-icon {
+    font-size: 3rem;
+    color: #e67e22;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .card-icon:hover {
+    color: #d35400;
+  }
+  
+  /* Card Title Styling */
+  .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Card Paragraph Styling */
+  .card p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Learn More Link */
+  .card-link {
+    font-weight: 600;
+    color: #e67e22;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .card-link:hover {
+    color: #d35400;
+  }
+  
+  /* Star Rating (Hidden by Default) */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Starts from below */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Show Stars on Hover */
+  .card:hover .star-rating {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Star Icon */
+  .star {
+    color: #f1c40f;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .star:hover {
+    color: #f39c12;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      max-width: 90%;
+    }
+  }
+  

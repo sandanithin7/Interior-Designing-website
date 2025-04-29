@@ -1,0 +1,57 @@
+.premium-navbar {
+    background-color: #121212;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .premium-logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .premium-logo span {
+    color: #ffb347;
+  }
+  
+  .premium-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #dddddd;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .premium-link:hover {
+    color: #ffb347;
+  }
+  
+  .premium-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #ffb347;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  
+  .premium-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Optional: mobile spacing tweaks */
+  @media (max-width: 991px) {
+    .premium-link {
+      font-size: 1.5rem;
+      padding: 10px 0;
+    }
+  
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+  }
+  
