@@ -1,0 +1,228 @@
+/* Base Styles */
+.design-tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    border-radius: 15px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .highlight {
+    color: #ffb347;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: rgba(108, 92, 231, 0.2);
+    z-index: -1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Tabs */
+  .tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+  }
+  
+  .tab-button {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background: #f1f1f1;
+  }
+  
+  .tab-button.active {
+    background: #ffb347;
+    color: white;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+  }
+  
+  /* Tools Grid */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .tool-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+  }
+  
+  .tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tool-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tool-icon {
+    font-size: 1.5rem;
+    color: #ffb347;
+  }
+  
+  .tool-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffb347;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .tool-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .tool-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .explore-button {
+    background: transparent;
+    border: none;
+    color: #ffb347;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    gap: 1rem;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .explore-button:hover .arrow {
+    transform: translateX(5px);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #ffb347 0%, #ffb347 100%);
+    border-radius: 15px;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-text {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+  }
+  
+  .cta-button {
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #ffb347;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .tabs-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,132 +1,231 @@
-/* Card Section Styling */
+/* Base Styles */
 .card-section {
-    background-color: #f0f0f0;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
+  background: #f8f8f8;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+}
+
+.card-subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card Styling */
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.luxury-card::before {
+  background: linear-gradient(90deg, black);
+}
+
+.quality-card::before {
+  background: linear-gradient(90deg, black);
+}
+
+.value-card::before {
+  background: linear-gradient(90deg, black );
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-container {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  color: white;
+  padding: 25px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.luxury-card .card-icon {
+  background: linear-gradient(135deg, black);
+}
+
+.quality-card .card-icon {
+  background: linear-gradient(135deg, black);
+}
+
+.value-card .card-icon {
+  background: linear-gradient(135deg, black);
+}
+
+.card-content {
+  padding: 0 30px 30px;
+  flex-grow: 1;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+  text-align: center;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.card-features {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-features span {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.card-features span::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.luxury-card .card-features span::before {
+  background: black;
+}
+
+.quality-card .card-features span::before {
+  background: black;
+}
+
+.value-card .card-features span::before {
+  background: black;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.luxury-card .card-link {
+  background: linear-gradient(90deg, black);
+}
+
+.quality-card .card-link {
+  background: linear-gradient(90deg, black);
+}
+
+.value-card .card-link {
+  background: linear-gradient(90deg, black);
+}
+
+.card-link:hover {
+  letter-spacing: 2px;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .card-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    font-size: 2.5rem;
   }
   
   .card-subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+    font-size: 1.1rem;
   }
   
-  /* Card Container */
   .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    grid-template-columns: 1fr;
+    max-width: 500px;
   }
-  
-  /* Individual Card Styling */
-  .card {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    max-width: 300px;
-    flex: 1;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15); /* More prominent shadow */
-  }
-  
-  /* Icon Styling */
-  .card-icon {
-    font-size: 3rem;
-    color: #e67e22;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-  }
-  
-  .card-icon:hover {
-    color: #d35400;
-  }
-  
-  /* Card Title Styling */
-  .card h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  /* Card Paragraph Styling */
-  .card p {
-    font-size: 1rem;
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  /* Learn More Link */
-  .card-link {
-    font-weight: 600;
-    color: #e67e22;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .card-link:hover {
-    color: #d35400;
-  }
-  
-  /* Star Rating (Hidden by Default) */
-  .star-rating {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 15px;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px); /* Starts from below */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Show Stars on Hover */
-  .card:hover .star-rating {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Star Icon */
-  .star {
-    color: #f1c40f;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .star:hover {
-    color: #f39c12;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card {
-      max-width: 90%;
-    }
-  }
-  
+}

@@ -15,15 +15,8 @@
 // }
 
 // export default App;
-import React from 'react';
-import Navbar from './components/navbar/Navbar';
-import SideMatter from './components/aside/SideMatter';
-import Card from './components/cards/Card';
-import Article from './components/article/Article';
-import TeamCard from './components/team/TeamCard';
-import Living from './components/living/Living';
-import Newsletter from './components/newsletter/Newletter';
-import Footer from './components/footer/Footer';
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
 
 
 
@@ -31,22 +24,48 @@ import Footer from './components/footer/Footer';
 
 
 
+// function App() {
+//   return (
+//     <>
+// <NavLink></NavLink>
 
-function App() {
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/navbar/Navbar";
+import Projects from "./components/project/Project";
+import DesignTools from "./components/design/Design";
+import Contact from "./components/contact/Contact";
+import Maintain from "./components/navlink/Maintain";
+
+
+const App = () => {
   return (
     <>
+  
+
 <Navbar></Navbar>
-<SideMatter></SideMatter>
-    <Card></Card>
-   <Article></Article>
-<Living></Living>
-<TeamCard></TeamCard>
-<Newsletter></Newsletter>
-<Footer></Footer>
 
 
+      <Routes>
+
+        <Route path="/" element={<Maintain />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/design-tools" element={<DesignTools/>} />
+        <Route path="/contact" element={<Contact/>} />
+      </Routes>
+
+   
     </>
   );
-}
+};
 
-export default App;
+export default App
+

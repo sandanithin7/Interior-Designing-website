@@ -1,0 +1,199 @@
+/* Radical layout styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .image-section {
+    position: relative;
+    background: #0f0f15;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+  
+  .contact-visual {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    mix-blend-mode: luminosity;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135de, 0%,  100%);
+    opacity: 0.8;
+  }
+  
+  .image-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fdfcff;
+    width: 80%;
+  }
+  
+  .image-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.9;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .contact-method span {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+  
+  /* Form section styles */
+  .form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    background: #f8f9fa;
+  }
+  
+  .radial-form {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  }
+  
+  .radial-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Floating label effect */
+  .input-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .input-group.floating input {
+    height: 60px;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  
+  .input-group.floating label {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: white;
+    padding: 0 5px;
+  }
+  
+  .input-group.floating input:focus + label,
+  .input-group.floating input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #7209b7;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: #7209b7;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(114,9,183,0.1);
+  }
+  
+  /* Glow button effect */
+  .glow-button {
+    position: relative;
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background: #ffb347;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .glow-button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .glow-button .glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #3a0ca3 0%, #f72585 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .glow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(114,9,183,0.3);
+  }
+  
+  .glow-button:hover .glow {
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .image-section {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      height: 40vh;
+    }
+    
+    .image-content h2 {
+      font-size: 3rem;
+    }
+    
+    .form-section {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .radial-form {
+      padding: 2rem;
+    }
+  }
