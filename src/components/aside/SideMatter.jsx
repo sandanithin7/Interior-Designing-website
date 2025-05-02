@@ -37,10 +37,10 @@ const SideMatter = () => {
               BOOK CONSULTATION
               <FaArrowRight className="btn-icon" />
             </button>
-            <button className="btn btn-secondary">
+            <a href="tel:+15551234567" className="btn btn-secondary">
               <FaPhoneAlt className="btn-icon" />
-              +1 (555) 123-4567
-            </button>
+              +91 9505492525
+            </a>
           </div>
         </div>
 
